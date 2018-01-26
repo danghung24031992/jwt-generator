@@ -101,8 +101,9 @@ public class RNJwtGeneratorModule extends ReactContextBaseJavaModule {
           object.put(key, readableMap.getBoolean(key));
           break;
         case Number:
-          NumberFormat formatter = new DecimalFormat("#0.000");
-          object.put(key, Double.valueOf(formatter.format(readableMap.getDouble(key))));
+          // NumberFormat formatter = new DecimalFormat("#0.000");
+          // object.put(key, Double.valueOf(formatter.format(readableMap.getDouble(key))));
+          object.put(key, readableMap.getDouble(key));
           break;
         case String:
           object.put(key, readableMap.getString(key));
